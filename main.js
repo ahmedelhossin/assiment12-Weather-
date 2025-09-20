@@ -8,7 +8,7 @@ serchInput.addEventListener("input", function () {
     getCountry(serchInput.value)
 })
 function getCountry(country) {
-    myHttp.open("GET", `http://api.weatherapi.com/v1/forecast.json?key=3b78f46287004f25b62123847252009&q=${country}&days=3`)
+    myHttp.open("GET", `https://api.weatherapi.com/v1/forecast.json?key=3b78f46287004f25b62123847252009&q=${country}&days=3`)
     myHttp.send()
     myHttp.responseType = "json"
     myHttp.addEventListener("load", function () {
@@ -99,3 +99,4 @@ function display(resp) {
 }
 // console.log(resp.forecast.forecastday[0].day.maxtemp_c)
 // today.innerHTML = cartonatoday
+
